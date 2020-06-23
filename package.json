@@ -3,7 +3,7 @@
   "author": "Martijn Versluis",
   "version": "2.9.1",
   "description": "A JavaScript library for parsing and formatting chord sheets",
-  "main": "src/chordsheet.js",
+  "main": "lib/chordsheet.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/martijnversluis/ChordSheetJS.git"
@@ -27,7 +27,8 @@
     "test": "mocha --recursive --compilers js:babel-register",
     "build": "babel src --out-dir lib",
     "readme": "jsdoc2md -f src/**/*.js --template README.hbs > README.md",
-    "prepublishOnly": "npm install && npm test && npm run build"
+    "prepublishOnly": "npm install && npm test && npm run build",
+	"prepare": "npm run build"
   },
   "dependencies": {
     "handlebars": "^4.0.5"
